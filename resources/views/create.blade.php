@@ -43,7 +43,7 @@
             </div>
             <div class="form-group">
                 <label for="name">Domaine</label><br>
-                <select id="domain" name="domaine" >
+                <select id="domaine" name="domaine" >
                     <option value="Developpemnt Web">Developpement web-mobile</option>
                     <option value="Design">Design</option>
                     <option value="Marketing Digital">Marketing digital</option>

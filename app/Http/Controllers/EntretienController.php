@@ -122,10 +122,16 @@ class EntretienController extends Controller
 
   public function dev( Request $request)
     {
-        $entretiens = Entretien::find('entretien_id',$request->id)->get();
-        
-        return view('index', compact('entretiens'));
+       $domaine = $request->input('domaine');
+        $maladie_ou_allergie = $request->input('maladie_ou_allergie');
+        $date = $request->input('date');
 
+        $entretiens = Entretien::where('domaine', $domaine)
+                              ->where('maladie_ou_allergie', $maladie_ou_allergie)
+                              ->whereDate('created_at', $date)
+                              ->get();
+
+        return view('resultats', compact('entretiens'));
 
 }
 

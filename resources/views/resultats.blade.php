@@ -11,24 +11,26 @@
 </style>
 
 <div class="uper ">
-    @include('partials.dev')
 
   @if(session()->get('success'))
     <div class="alert alert-success">
       {{ session()->get('success') }}
     </div><br />
   @endif
-@include('partials.search')
 
 <div class="container-fluid ">
    <table class="table " style="width:100%;">
     <div
         <tr >
 
-          <th>ID</th>
+           <th>ID</th>
           <th>Nom</th>
           <th>Prenom</th>
-         <th>Actions</th>
+         <th>Domaine</th>
+         <th>Maladie ou Allergie</th>
+        <th>Date</th>
+        <th>Action</th>
+
 
 
         </tr>
@@ -37,9 +39,12 @@
 
         @foreach($entretiens as $entretien)
 
-    <td>{{ $entretien->id }}</td>
+   <td>{{ $entretien->id }}</td>
       <td>{{ $entretien->nom}}</td>
       <td>{{ $entretien->prenom}}</td>
+       <td>{{ $entretien->domaine }}</td>
+        <td>{{ $entretien->maladie_ou_allergie }}</td>
+        <td>{{ $entretien->created_at->format('d/m/Y') }}</td>
 
 
 
@@ -75,3 +80,58 @@
 
 <div>
 @endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         
+
+

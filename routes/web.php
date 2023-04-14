@@ -21,7 +21,7 @@ Route::resource('entretiens', EntretienController::class);
 
 Route::get('/search', [EntretienController::class, 'search'])->name('index.search');
 
-Route::get('/dev/{id}', [EntretienController::class, 'dev'])->name('index.dev');
+Route::get('dev', [EntretienController::class, 'dev'])->name('index.dev');
 
 Route::get('/export_entretien_pdf', [EntretienController::class, 'export_entretien_pdf'])->name('entretien.pdf');
 
