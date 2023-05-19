@@ -31,7 +31,6 @@ class EntretienController extends Controller
     public function create()
     {
 
-       return view('create');
 
          $entretiens = Entretien::all();
     return view('create', compact('entretiens'));
@@ -209,6 +208,13 @@ class EntretienController extends Controller
 
     return redirect('/entretiens')->with('success', 'Entretien supprimer avec succèss');
     }
+
+    public function dashboard()
+{
+    $entretiens = Entretien::all();
+
+    return view('dashboard', compact('entretiens'));
+}
 
 
 }

@@ -22,7 +22,7 @@
 
 <div class="container-fluid ">
    <table class="table " style="width:100%;">
-    <div
+    <div>
         <tr >
 
           <th>ID</th>
@@ -45,15 +45,23 @@
 
             <td class="d-flex ">
                 <a href="{{ route('entretiens.show', $entretien->id)}}" class="btn btn-success mx-1 " ><i class="fa fa-eye " ></i></a>
+                
 
              <a href="{{ route('entretiens.edit', $entretien->id)}}" class="btn btn-primary mx-1 "  ><i class="fa fa-pencil-square-o" ></i></a>
 
 
-                <form action="{{ route('entretiens.destroy', $entretien->id)}}" method="post">
-                  @csrf
-                  @method('DELETE')
-                  <button  class="btn btn-danger mx-1"  type="submit"><i class="fa fa-trash" ></i></button>
-                </form>
+             <a href="{{ route('entretiens.destroy', $entretien->id) }}"
+            onclick="event.preventDefault();
+            if (confirm('Êtes-vous sûr de vouloir supprimer cet élément ?')) {
+                document.getElementById('delete-form').submit();
+            }">
+    <button  class="btn btn-danger mx-1"  type="submit"><i class="fa fa-trash" ></i></button>
+</a>
+
+<form id="delete-form" action="{{ route('entretiens.destroy', $entretien->id) }}" method="POST" style="display: none;">
+    @method('DELETE')
+    @csrf
+</form>
 
 
 

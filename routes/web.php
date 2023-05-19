@@ -19,6 +19,7 @@ use App\Http\Controllers\EntretienController;
 */
 Route::resource('entretiens', EntretienController::class);
 
+
 Route::get('/search', [EntretienController::class, 'search'])->name('index.search');
 
 Route::get('dev', [EntretienController::class, 'dev'])->name('index.dev');
@@ -27,11 +28,9 @@ Route::get('/export_entretien_pdf', [EntretienController::class, 'export_entreti
 
 
 Route::get('/', function () {
-    return view('create');
+    return view('auth.register');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [EntretienController::class,'dashboard'])->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
