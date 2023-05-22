@@ -217,4 +217,11 @@ class EntretienController extends Controller
 }
 
 
+   public function entretien()
+{
+    $entretiens = Entretien::all();
+
+    return view('partials.entretiens-create', compact('entretiens'));
+}
+
 }

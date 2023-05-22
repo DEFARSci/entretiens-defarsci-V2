@@ -20,6 +20,10 @@ use App\Http\Controllers\EntretienController;
 Route::resource('entretiens', EntretienController::class);
 
 
+
+
+Route::get('/create', [EntretienController::class, 'entretien'])->name('entretiens-create');
+
 Route::get('/search', [EntretienController::class, 'search'])->name('index.search');
 
 Route::get('dev', [EntretienController::class, 'dev'])->name('index.dev');
