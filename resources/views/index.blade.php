@@ -66,7 +66,7 @@
 
 
 
-                 <a class="btn btn-warning mx-1 "  href="{{ route('entretien.pdf') }}"> <i class="fa fa-download" ></i> </a>
+                 <a class="btn btn-warning mx-1 "  href="{{ route('entretien.pdf', $entretien->id) }}"> <i class="fa fa-download" ></i> </a>
 
             </td>
 

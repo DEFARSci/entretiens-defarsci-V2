@@ -52,14 +52,16 @@
                     </div>
                     <div class="form-group">
                         <label for="name">Domaine</label><br>
-                        <select id="domain" name="domaine" value="{{ $entretien->domaine }}">
-                             <option value="developpemnt">  Developpenmt Web</option>
+                        <select id="domaine" name="domaine" value="{{ $entretien->domaine }}">
+                       
+                    <option value="{{ $entretien->domaine }}" > {{ $entretien->domaine }} </option>       
+                    <option value="developpement-Web">  Developpenmt Web</option>
                     <option value="Design">Design</option>
-                    <option value="Marketing Digital">Marketing digital</option>
+                    <option value="Marketing-Digital">Marketing digital</option>
                     <option value="Bureautique">Bureautique</option>
-                    <option value="Ressources Humaines">Ressources humaines</option>
-                    <option value="Arduino-Modelisation 3D">Arduino-Modélisation 3D</option>
-                    <option value="Gestion de projet">Gestion de projet</option>
+                    <option value="Ressources-Humaines">Ressources humaines</option>
+                    <option value="Arduino-Modelisation-3D">Arduino-Modélisation 3D</option>
+                    <option value="Gestion-de-projet">Gestion de projet</option>
                     <option value="Maintenance">Maintenance</option>
                         </select>
                     </div>

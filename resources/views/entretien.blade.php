@@ -72,7 +72,7 @@ a{
     <div class="container">
 
      <div class="header">
-        <h3>{{ $entretien->prenom }} {{ $entretien->nom }}</h3><br>
+        <h3> {{ $entretien->prenom }} {{ $entretien->nom }} </h3><br>
     </div><br>
     <div class="form">
 

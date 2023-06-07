@@ -28,7 +28,7 @@ Route::get('/search', [EntretienController::class, 'search'])->name('index.searc
 
 Route::get('dev', [EntretienController::class, 'dev'])->name('index.dev');
 
-Route::get('/export_entretien_pdf', [EntretienController::class, 'export_entretien_pdf'])->name('entretien.pdf');
+Route::get('/export_entretien_pdf/{id}', [EntretienController::class, 'export_entretien_pdf'])->name('entretien.pdf');
 
 
 Route::get('/', function () {

@@ -135,10 +135,10 @@ class EntretienController extends Controller
 }
 
 
-  public function export_entretien_pdf(){
+  public function export_entretien_pdf($id){
 
 
-    $entretiens = Entretien::find(27 );
+    $entretiens = Entretien::find($id );
         $pdf = PDF::loadView('entretien', ['entretien'=>$entretiens]);
         return $pdf->download('entretien.pdf');
   }

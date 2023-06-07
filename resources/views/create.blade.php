@@ -44,13 +44,13 @@
             <div class="form-group">
                 <label for="name">Domaine</label><br>
                 <select id="domaine" name="domaine" >
-                    <option value="Developpemnt Web">Developpement web-mobile</option>
+                    <option value="Developpement-Web">Developpement web-mobile</option>
                     <option value="Design">Design</option>
-                    <option value="Marketing Digital">Marketing digital</option>
+                    <option value="Marketing-Digital">Marketing digital</option>
                     <option value="Bureautique">Bureautique</option>
-                    <option value="Ressources Humaines">Ressources humaines</option>
+                    <option value="Ressources-Humaines">Ressources humaines</option>
                     <option value="Arduino-Modelisation 3D">Arduino-Modélisation 3D</option>
-                    <option value="Gestion de projet">Gestion de projet</option>
+                    <option value="Gestion-de-projet">Gestion de projet</option>
                     <option value="Maintenance">Maintenance</option>
                   </select>
             </div>

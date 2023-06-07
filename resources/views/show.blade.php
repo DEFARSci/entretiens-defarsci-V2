@@ -111,7 +111,7 @@ a{
 
  
     <div>
-        <a class="btn btn-Secondary" href="{{ route('entretien.pdf') }}"> <i class="fa fa-download" style="font-size:36px"></i></a>
+        <a class="btn btn-Secondary" href="{{ route('entretien.pdf', $entretien->id) }}"> <i class="fa fa-download" style="font-size:36px"></i></a>
 
     </div>
 
