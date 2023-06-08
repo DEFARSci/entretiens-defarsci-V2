@@ -203,10 +203,10 @@ class EntretienController extends Controller
      */
     public function destroy($id)
     {
-          $entretien = Entretien::findOrFail($id);
+         /*  $entretien = Entretien::findOrFail($id);
     $entretien->delete();
 
-    return redirect('/entretiens')->with('success', 'Entretien supprimer avec succèss');
+    return redirect('/entretiens')->with('success', 'Entretien supprimer avec succèss'); */
     }
 
     public function dashboard()

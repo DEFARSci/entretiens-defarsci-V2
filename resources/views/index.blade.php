@@ -45,12 +45,12 @@
 
             <td class="d-flex ">
                 <a href="{{ route('entretiens.show', $entretien->id)}}" class="btn btn-success mx-1 " ><i class="fa fa-eye " ></i></a>
-                
+
 
              <a href="{{ route('entretiens.edit', $entretien->id)}}" class="btn btn-primary mx-1 "  ><i class="fa fa-pencil-square-o" ></i></a>
 
 
-             <a href="{{ route('entretiens.destroy', $entretien->id) }}"
+             {{-- <a href="{{ route('entretiens.destroy', $entretien->id) }}"
             onclick="event.preventDefault();
             if (confirm('Êtes-vous sûr de vouloir supprimer cet élément ?')) {
                 document.getElementById('delete-form').submit();
@@ -61,7 +61,7 @@
 <form id="delete-form" action="{{ route('entretiens.destroy', $entretien->id) }}" method="POST" style="display: none;">
     @method('DELETE')
     @csrf
-</form>
+</form> --}}
 
 
 

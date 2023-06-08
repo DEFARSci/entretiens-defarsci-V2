@@ -54,11 +54,11 @@
              <a href="{{ route('entretiens.edit', $entretien->id)}}" class="btn btn-primary mx-1 "  ><i class="fa fa-pencil-square-o" ></i></a>
 
 
-                <form action="{{ route('entretiens.destroy', $entretien->id)}}" method="post">
+                {{-- <form action="{{ route('entretiens.destroy', $entretien->id)}}" method="post">
                   @csrf
                   @method('DELETE')
                   <button  class="btn btn-danger mx-1"  type="submit"><i class="fa fa-trash" ></i></button>
-                </form>
+                </form> --}}
 
 
 

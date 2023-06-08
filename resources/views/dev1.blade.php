@@ -26,7 +26,7 @@
           <td>Prenom</td>
           <td >Montrer</td>
           <td>Modifier</td>
-          <td>Supprimer</td>
+          {{-- <td>Supprimer</td> --}}
         </tr>
     </thead>
 
@@ -41,13 +41,13 @@
 
              <td><a href="{{ route('entretiens.edit', $entretien->id)}}" class="btn btn-primary w-9 h-8" style=" margin-top:20%" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
 
-            <td>
+            {{-- <td>
                 <form action="{{ route('entretiens.destroy', $entretien->id)}}" method="post">
                   @csrf
                   @method('DELETE')
                   <button  class="btn btn-danger w-9 h-8" style=" margin-top:20%" type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
                 </form>
-            </td>
+            </td> --}}
         </tr>
         @endforeach
     </tbody>
