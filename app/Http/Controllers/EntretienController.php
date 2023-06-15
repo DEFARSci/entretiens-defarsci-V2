@@ -75,7 +75,7 @@ class EntretienController extends Controller
         $entretiens->save();
 
 
-        return redirect('/entretiens')->with('success', 'Entretien créer avec succèss');
+        return redirect('/dashboard')->with('success', 'Entretien créer avec succèss');
 
 
         $sucess='User Created';

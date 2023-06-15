@@ -10,9 +10,9 @@
 
 @section('content')
 <style>
-  .uper {
+  /* .uper {
     margin-top: 40px;
-  }
+  } */
 </style>
 
 <div >
