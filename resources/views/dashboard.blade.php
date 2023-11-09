@@ -31,30 +31,21 @@
    <table class="table " style="width:100%;">
     <div>
         <tr >
-
           <th>ID</th>
           <th>Nom</th>
           <th>Prenom</th>
+          <th>Date</th>
          <th>Actions</th>
-
-
         </tr>
-
 <tr>
-
         @foreach($entretiens as $entretien)
-
-    <td>{{ $entretien->id }}</td>
+      <td>{{ $entretien->id }}</td>
       <td>{{ $entretien->nom}}</td>
       <td>{{ $entretien->prenom}}</td>
-
-
-
-            <td class="d-flex ">
+      <td>{{$entretien->created_at->formatLocalized('%d %B %Y %H:%M:%S') }}</td>
+      <td class="d-flex ">
                 <a href="{{ route('entretiens.show', $entretien->id)}}" class="btn btn-success mx-1 " ><i class="fa fa-eye " ></i></a>
-
-
-             <a href="{{ route('entretiens.edit', $entretien->id)}}" class="btn btn-primary mx-1 "  ><i class="fa fa-pencil-square-o" ></i></a>
+                 <a href="{{ route('entretiens.edit', $entretien->id)}}" class="btn btn-primary mx-1 "  ><i class="fa fa-pencil-square-o" ></i></a>
 
 
              {{-- <a href="{{ route('entretiens.destroy', $entretien->id) }}"
@@ -89,6 +80,9 @@
     </table>
 
 <div>
+    <div class="d-flex justify-content-center">
+        {{ $entretiens->links() }}
+    </div>
 @endsection
 
                 </div>

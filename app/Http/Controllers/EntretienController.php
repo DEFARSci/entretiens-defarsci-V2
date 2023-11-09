@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use PDF;
+use Carbon\Carbon;
 use App\Models\Entretien;
 use Illuminate\Http\Request;
-use PDF;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -17,7 +19,8 @@ class EntretienController extends Controller
      */
     public function index()
     {
-        $entretiens = Entretien::all();
+        $entretiens = Entretien::orderBy('id', 'desc')->get();
+
 
     return view('index', compact('entretiens'));
 
@@ -106,29 +109,51 @@ class EntretienController extends Controller
         return view('edit', compact('entretien'));
     }
 
-    public function search()
+    public function search(Request $request)
     {
-        $entretiens = request()->input('entretiens');
-
-    $entretiens  =   Entretien::where('prenom', 'like', "%$entretiens%")
-
-            ->orWhere('nom', 'like', "%$entretiens")
+            $nom=$request->nom;
+            $prenom=$request->prenom;
+            $entretiens = Entretien::when($nom != null, function ($query) use ($nom) {
+                return $query->where('nom', 'like', '%' . $nom . '%');
+            })
+            ->when($prenom != null, function ($query) use ($prenom) {
+                return $query->where('prenom', 'like', '%' . $prenom . '%');
+            })
             ->get();
 
-            return view('search1')->with('entretiens', $entretiens);
+            // dd($entretien);
+            return view('search1',compact('entretiens'));
 
   }
 
   public function dev( Request $request)
     {
-       $domaine = $request->input('domaine');
-        $maladie_ou_allergie = $request->input('maladie_ou_allergie');
-        $date = $request->input('date');
+        $domaine=$request->domaine;
+        $date=$request->date;
+        $alergie=$request->maladie_ou_allergie;
 
-        $entretiens = Entretien::where('domaine', $domaine)
-                              ->where('maladie_ou_allergie', $maladie_ou_allergie)
-                              ->whereDate('created_at', $date)
-                              ->get();
+        // dd(Carbon::parse($date)->toDateTimeString());
+        $entretiens = Entretien::when($domaine != null, function ($query) use ($domaine) {
+            return $query->where('domaine', $domaine);
+        })
+        ->when($date != null, function ($query) use ($date) {
+            return $query->whereDate('created_at', Carbon::parse($date)->toDateString());
+        })
+        ->when($alergie != null, function ($query) use ($alergie) {
+            return $query->where('maladie_ou_allergie', $alergie);
+        })
+        ->get();
+
+
+
+    //    $domaine = $request->input('domaine');
+    //    $maladie_ou_allergie = $request->input('maladie_ou_allergie');
+    //    $date = $request->input('date');
+
+    //     $entretiens = Entretien::where('domaine', $domaine)
+    //                           ->where('maladie_ou_allergie', $maladie_ou_allergie)
+    //                           ->whereDate('created_at', $date)
+    //                           ->get();
 
         return view('resultats', compact('entretiens'));
 
@@ -211,7 +236,9 @@ class EntretienController extends Controller
 
     public function dashboard()
 {
-    $entretiens = Entretien::all();
+    $entretiens = Entretien::orderBy('id', 'desc')
+                            ->paginate(15);
+
 
     return view('dashboard', compact('entretiens'));
 }

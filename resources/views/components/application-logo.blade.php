@@ -1,1 +1,1 @@
-<img src="{{asset('defarsci11.jpeg')}}" width="50" height="50"  />
+<img src="{{asset('logo.png')}}" width="60" height="60"  />

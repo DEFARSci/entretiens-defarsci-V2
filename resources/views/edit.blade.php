@@ -1,7 +1,12 @@
 @extends('layout')
 
 @section('content')
-
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Dashboard') }}
+        </h2>
+    </x-slot>
     <style>
         .uper {
             margin-top: 40px;
@@ -52,9 +57,8 @@
                     </div>
                     <div class="form-group">
                         <label for="name">Domaine</label><br>
-                        <select id="domaine" name="domaine" value="{{ $entretien->domaine }}">
-                       
-                    <option value="{{ $entretien->domaine }}" > {{ $entretien->domaine }} </option>       
+                        <select id="domaine" name="domaine">
+                    <option value="{{ $entretien->domaine }}" > {{ $entretien->domaine }} </option>
                     <option value="developpement-Web">  Developpenmt Web</option>
                     <option value="Design">Design</option>
                     <option value="Marketing-Digital">Marketing digital</option>
@@ -67,8 +71,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1" class="form-label">Pourquoi ce choix:</label>
-                        <textarea id="exampleFormControlTextarea1" rows="3" required name="pourquoi_ce_choix">
-                        {{ $entretien->pourquoi_ce_choix }}</textarea>
+                        <textarea id="exampleFormControlTextarea1" rows="3" required name="pourquoi_ce_choix">{{$entretien->pourquoi_ce_choix }}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1" class="form-label">Participants de l'entretien:</label>
@@ -86,13 +89,13 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1" class="form-label">Comment voyez vous defar sci:</label>
-                        <textarea id="exampleFormControlTextarea1" rows="3" required name="comment_voyez_vous_defarsci">
-                            {{ $entretien->comment_voyez_vous_defarsci }}</textarea>
+                        <textarea id="exampleFormControlTextarea1" rows="3" required name="comment_voyez_vous_defarsci"
+                        >{{ $entretien->comment_voyez_vous_defarsci }}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1" class="form-label">Qu'attendez vous de defar sci:</label>
-                        <textarea id="exampleFormControlTextarea1" rows="3" required name="qu_entendez_de_defarsci">
-                            {{ $entretien->qu_entendez_de_defarsci }}</textarea>
+                        <textarea id="exampleFormControlTextarea1" rows="3" required name="qu_entendez_de_defarsci"
+                        >{{ $entretien->qu_entendez_de_defarsci }}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1" class="form-label">Parlez nous de vos atouts:</label>
@@ -100,8 +103,8 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1" class="form-label">Parlez nous de vos faiblesses:</label>
-                        <textarea id="exampleFormControlTextarea1" rows="3" required name="faiblesses">
-                            {{ $entretien->faiblesses }}</textarea>
+                        <textarea id="exampleFormControlTextarea1" rows="3" required name="faiblesses"
+                        >{{ $entretien->faiblesses }}</textarea>
                     </div>
 
                     <br>
@@ -151,20 +154,18 @@
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1" class="form-label">Quels sont vos objectifs fixés d'ici
                             2ans:</label>
-                        <textarea id="exampleFormControlTextarea1" rows="3" required name="objectifs_dans_2ans">
-                            {{ $entretien->objectifs_dans_2ans }}</textarea>
+                        <textarea id="exampleFormControlTextarea1" rows="3" required name="objectifs_dans_2ans"
+                        >{{ $entretien->objectifs_dans_2ans }}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1" class="form-label">Combien de mois voulez vous faire la
                             formation:</label>
-                        <textarea id="exampleFormControlTextarea1" rows="3" required name="mois_de_formation">
-                            {{ $entretien->mois_de_formation }}</textarea>
+                        <textarea id="exampleFormControlTextarea1" rows="3" required name="mois_de_formation">{{ $entretien->mois_de_formation }}</textarea>
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1" class="form-label">Quand est ce que vous allez demarrer
                             la formation:</label>
-                        <textarea id="exampleFormControlTextarea1" rows="3" required name="demarrage">
-                            {{ $entretien->demarrage }}</textarea>
+                        <textarea id="exampleFormControlTextarea1" rows="3" required name="demarrage">{{ $entretien->demarrage }}</textarea>
                     </div>
                     <div class="form-group" name="horaires">
                         <h4>Présentation des horaires de travail</h4>
@@ -174,8 +175,7 @@
                     </div>
                     <div class="form-group">
                         <h4> Disponibilté du candidat</h4>
-                        <textarea id="exampleFormControlTextarea1" rows="3" required name="candidat">
-                            {{ $entretien->disponibilite_du_candidat }}</textarea>
+                        <textarea id="exampleFormControlTextarea1" rows="3" required name="candidat">{{ $entretien->disponibilite_du_candidat }}</textarea>
                     </div>
                     <div class="form-group">
                         <h4>Modalité du paiement de la formation</h4>
@@ -200,8 +200,7 @@
                     <br>
                     <div class="form-group1">
                         <label for="exampleFormControlTextarea1" class="form-label">Information supplémentaire</label><br>
-                        <textarea class="IS" id="exampleFormControlTextarea1" rows="3" required name="informations">
-                            {{ $entretien->informations_supplementaires }}</textarea>
+                        <textarea class="IS" id="exampleFormControlTextarea1" rows="3" required name="informations">{{ $entretien->informations_supplementaires }}</textarea>
                     </div>
                     <div class="form-group">
                         <button value="Précédent" onclick="showStep1()" id="bouton">Précédent</button>
@@ -236,3 +235,4 @@
         </script>
 
     @endsection
+</x-app-layout>

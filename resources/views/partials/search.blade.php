@@ -11,17 +11,23 @@
 <body>
 
 
-<form action="{{ route('index.search') }}" class="d-flex  ">
+<form action="{{ route('index.search') }}" class="d-flex">
+<div class="row mt-3 p-2">
 
-    <div class="form-group  " >
+    <div class=" col-md-5" >
 
-<input type="text" name="entretiens" class="form-control" value="{{ request()->entretiens ?? '' }}" />
+        <input type="text" name="prenom" class="form-control" placeholder="Prenom"/>
     </div>
+    <div class="col-md-5  " >
+        <input type="text" name="nom" class="form-control" placeholder="Nom"  />
+    </div>
+    <div class="col-md-2  " >
+    <button type="submit" class="btn btn-info  ">
+        <i class="fa fa-search " style="color:white  "></i>
 
-  <button type="submit" class="btn btn-info w-18 h-25  " style="margin-top:2.5%">
-    <i class="fa fa-search " style="color:white  "></i>
-
-</button>
+    </button>
+    </div>
+</div>
 
 </form>
 

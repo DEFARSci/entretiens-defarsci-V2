@@ -16,8 +16,8 @@
     <div class="form-group ">
 
 
-    <select name="domaine" id="domaine" style="color:blue;width:30.5%;">
-                     <option   value="">Domaine</option>
+    <select name="domaine" id="domaine" style="color:blue;" class="col-md-3">
+                    <option value="">Domaine</option>
                     <option value="Developpemnt Web">Developpement web-mobile</option>
                     <option value="Design">Design</option>
                     <option value="Marketing Digital">Marketing digital</option>

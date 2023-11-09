@@ -9,7 +9,7 @@
     <title></title>
   </head>
   <body>
-           
+
     <style>
 
         *{
@@ -65,16 +65,20 @@ a{
     font-size: 20px;
     text-decoration: none;
 }
+.date{
+    padding: 15px;
+}
     </style>
 
 
-    
+
 
     <div class="container">
 
      <div class="header">
         <h3>{{ $entretien->prenom }} {{ $entretien->nom }}</h3><br>
     </div><br>
+    <div class="date"><h3><b class="lbl">Fait le :</b>{{$entretien->created_at->formatLocalized('%d %B %Y') }}</h3></div>
     <div class="form">
 
   <div class="section1">
@@ -109,7 +113,7 @@ a{
 
   </div>
 
- 
+
     <div>
         <a class="btn btn-Secondary" href="{{ route('entretien.pdf', $entretien->id) }}"> <i class="fa fa-download" style="font-size:36px"></i></a>
 

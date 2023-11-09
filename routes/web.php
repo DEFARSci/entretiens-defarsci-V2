@@ -22,18 +22,18 @@ Route::resource('entretiens', EntretienController::class);
 
 
 
-Route::get('/create', [EntretienController::class, 'entretien'])->name('entretiens-create');
+Route::get('/create', [EntretienController::class, 'entretien'])->middleware(['auth'])->name('entretiens-create');
 
 Route::get('/search', [EntretienController::class, 'search'])->name('index.search');
 
-Route::get('dev', [EntretienController::class, 'dev'])->name('index.dev');
+Route::get('/dev', [EntretienController::class, 'dev'])->name('index.dev');
 
 Route::get('/export_entretien_pdf/{id}', [EntretienController::class, 'export_entretien_pdf'])->name('entretien.pdf');
 
 
 Route::get('/', function () {
-    return view('auth.register');
-});
+    return redirect()->route('entretiens-create');
+})->middleware(['auth']);
 
 Route::get('/dashboard', [EntretienController::class,'dashboard'])->middleware(['auth'])->name('dashboard');
 
