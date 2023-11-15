@@ -42,7 +42,7 @@
       <td>{{ $entretien->id }}</td>
       <td>{{ $entretien->nom}}</td>
       <td>{{ $entretien->prenom}}</td>
-      <td>{{$entretien->created_at->formatLocalized('%d %B %Y %H:%M:%S') }}</td>
+      <td>{{$entretien->created_at->formatLocalized('%d %B %Y') }}</td>
       <td class="d-flex ">
                 <a href="{{ route('entretiens.show', $entretien->id)}}" class="btn btn-success mx-1 " ><i class="fa fa-eye " ></i></a>
                  <a href="{{ route('entretiens.edit', $entretien->id)}}" class="btn btn-primary mx-1 "  ><i class="fa fa-pencil-square-o" ></i></a>
