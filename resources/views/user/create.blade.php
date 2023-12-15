@@ -33,6 +33,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Enregistrer</button>
+        
     </form>
 
 @endsection
