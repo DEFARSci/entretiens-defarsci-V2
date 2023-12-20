@@ -61,9 +61,6 @@
     @csrf
 </form> --}}
 
-
-
-
                  <a class="btn btn-warning mx-1 "  href="{{ route('entretien.pdf',$entretien->id) }}"> <i class="fa fa-download" ></i> </a>
 
             </td>

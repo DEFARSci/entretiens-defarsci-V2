@@ -1,11 +1,11 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight ">
             {{ __('Entretien') }}
         </h2>
     </x-slot>
-    
-                    
+
+
  @extends('layout')
 
 @section('content')
@@ -99,11 +99,6 @@
             <button type="button" value="Suivant" onclick="showStep2()" id="bouton">suivant</button>
             </div>
             </div>
-
-
-
-
-
         <div id="step2" style="display:none">
 
 
