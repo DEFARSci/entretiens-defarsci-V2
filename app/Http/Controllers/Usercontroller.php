@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -37,6 +38,9 @@ class UserController extends Controller
             'password' => 'required',
         ]);
 
+        // Crypter le mot de passe
+        $request->merge(['password' => bcrypt($request->input('password'))]);
+
         // Création d'un nouvel utilisateur
         User::create($request->all());
 
@@ -66,6 +70,9 @@ class UserController extends Controller
             'email' => 'required|unique:users,email,' . $id,
             'password' => 'required',
         ]);
+
+        // Crypter le mot de passe
+        $request->merge(['password' => bcrypt($request->input('password'))]);
 
         // Met à jour les informations de l'utilisateur
         $user = User::findOrFail($id);
