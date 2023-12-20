@@ -69,5 +69,6 @@
         @endforeach
     </table>
 
+    
 <div>
 @endsection
