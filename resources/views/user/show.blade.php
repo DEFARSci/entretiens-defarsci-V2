@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>Détails de l'utilisateur</h1>
+    <h4>Détails de l'utilisateur</h4>
 
     <table class="table table-bordered">
         <tr>

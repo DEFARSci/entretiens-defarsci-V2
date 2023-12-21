@@ -1,20 +1,23 @@
-<!-- index.blade.php -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+
 @extends('layout.app')
 
 @section('content')
-    <h1>Liste des Utilisateurs</h1>
+
+    <h4>Liste des Utilisateurs</h4>
 
     <!-- Formulaire de recherche -->
     <form action="{{ route('user.index') }}" method="GET">
-        <div class="form-group">
-            <input type="text" name="search" class="form-control" placeholder="Rechercher par nom ou email" value="{{ request('search') }}">
-            <button type="submit" class="btn btn-primary">Rechercher</button>
+        <div class="form-group d-flex  col-md-3">
+            <input type="text" name="search" class="form-control " placeholder="Rechercher par nom ou email" value="{{ request('search') }}">
+            <button type="submit" class="btn btn-info mx-1 text-white fs-3 font-weight-bold "><i class="bi bi-search"></i></button>
         </div>
     </form>
 
     <!-- Afficher la liste des utilisateurs -->
     <table class="table">
-    
+
         <thead>
             <tr>
                 <th>Nom</th>
@@ -28,12 +31,12 @@
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
                     <td>
-                        <a href="{{ route('user.show', $user->id) }}" class="btn btn-info">Voir</a>
-                        <a href="{{ route('user.edit', $user->id) }}" class="btn btn-primary">Modifier</a>
+                        <a href="{{ route('user.show', $user->id) }}" class="btn btn-success text-white"><i class="bi bi-eye fs-5"></i></a>
+                        <a href="{{ route('user.edit', $user->id) }}" class="btn btn-primary"><i class="bi bi-pencil-square text-white fs-5"></i></a>
                         <form action="{{ route('user.destroy', $user->id) }}" method="POST" style="display: inline-block;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Supprimer</button>
+                            <button type="submit" class="btn btn-danger"><i class="bi bi-trash fs-5"></i></button>
                         </form>
                     </td>
                 </tr>
@@ -43,6 +46,6 @@
 
     <!-- Paginate if needed -->
     {{ $users->links() }}
-    
+
     <a href="{{ route('user.create') }}" class="btn btn-primary">Créer un utilisateur</a>
 @endsection
