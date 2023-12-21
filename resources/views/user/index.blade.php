@@ -8,13 +8,22 @@
     <h4>Liste des Utilisateurs</h4>
 
     <!-- Formulaire de recherche -->
-    <form action="{{ route('user.index') }}" method="GET">
-        <div class="form-group d-flex  col-md-3">
-            <input type="text" name="search" class="form-control " placeholder="Rechercher par nom ou email" value="{{ request('search') }}">
-            <button type="submit" class="btn btn-info mx-1 text-white fs-3 font-weight-bold "><i class="bi bi-search"></i></button>
-        </div>
-    </form>
+    <div cl>
+        <div class="row">
+            <div class="col-md-6">
+                <form action="{{ route('user.index') }}" method="GET">
+                    <div class="form-group d-flex  col-md-8">
+                        <input type="text" name="search" class="form-control " placeholder="Rechercher par nom ou email" value="{{ request('search') }}">
+                        <button type="submit" class="btn btn-info mx-1 text-white fs-3"><i class="bi bi-search"></i></button>
+                    </div>
+                </form>
+            </div>
 
+            <div class="col-md-6" style="text-align: center;">
+                <a href="{{ route('user.create') }}" class="btn btn-primary fw-bold">Créer un utilisateur</a>
+            </div>
+        </div>
+    </div>
     <!-- Afficher la liste des utilisateurs -->
     <table class="table">
 
@@ -47,5 +56,4 @@
     <!-- Paginate if needed -->
     {{ $users->links() }}
 
-    <a href="{{ route('user.create') }}" class="btn btn-primary">Créer un utilisateur</a>
 @endsection
