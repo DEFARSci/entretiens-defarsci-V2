@@ -26,7 +26,7 @@ class CreateEntretiensTable extends Migration
             $table->string('presentation_du_Candidat');
             $table->string('connaissez_vous_defarsci');
             $table->string('comment_voyez_vous_defarsci');
-            $table->string('qu_entendez_de_defarsci');
+            $table->string('qu_entendez_de_defarsci'); 
             $table->string('atouts');
             $table->string('faiblesses');
             $table->string('maladie_ou_allergie');
