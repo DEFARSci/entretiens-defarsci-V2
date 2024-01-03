@@ -113,12 +113,6 @@ background-color: #84addb;
 background-color: #84addb;
 
   }
-
-
-
-
-
-
   @media screen and (max-width: 659px) {
 
     #step1{

@@ -19,7 +19,7 @@ use App\Http\Controllers\EntretienController;
 */
 
 
-Route::resource('user', UserController::class);
+Route::resource('user', UserController::class,);
 
 
 Route::resource('entretiens', EntretienController::class);

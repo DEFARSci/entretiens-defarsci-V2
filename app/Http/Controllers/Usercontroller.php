@@ -12,12 +12,12 @@ class UserController extends Controller
     public function index(Request $request)
     {
         $search = $request->input('search');
-        
+
         // Utilisation de paginate au lieu de all
         $users = User::where(function ($query) use ($search) {
             $query->where('name', 'like', "%$search%")
                 ->orWhere('email', 'like', "%$search%");
-        })->paginate(10); // Utilisez le nombre souhaité par page
+        })->paginate(5); // Utilisez le nombre souhaité par page
 
         return view('user.index', compact('users'));
     }
