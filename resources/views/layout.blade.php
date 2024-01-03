@@ -18,6 +18,9 @@
 }
 body{
   background-color: #f6f8fa;
+  background-image: url('img_logo.png');
+  background-size: content;
+  background-position: center;
 }
 form {
     font-family: Arial, sans-serif;

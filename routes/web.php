@@ -18,7 +18,6 @@ use App\Http\Controllers\EntretienController;
 |
 */
 
-
 Route::resource('user', UserController::class);
 
 
@@ -37,7 +36,7 @@ Route::get('/export_entretien_pdf/{id}', [EntretienController::class, 'export_en
 
 
 Route::get('/', function () {
-    return redirect()->route('entretiens-create');
+    return redirect()->route('dashboard');
 })->middleware(['auth']);
 
 Route::get('/dashboard', [EntretienController::class,'dashboard'])->middleware(['auth'])->name('dashboard');
