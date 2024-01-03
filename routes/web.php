@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\EntretienController;
 
 
@@ -17,6 +17,10 @@ use App\Http\Controllers\EntretienController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::resource('user', UserController::class);
+
+
 Route::resource('entretiens', EntretienController::class);
 
 
@@ -32,7 +36,7 @@ Route::get('/export_entretien_pdf/{id}', [EntretienController::class, 'export_en
 
 
 Route::get('/', function () {
-    return redirect()->route('entretiens-create');
+    return redirect()->route('dashboard');
 })->middleware(['auth']);
 
 Route::get('/dashboard', [EntretienController::class,'dashboard'])->middleware(['auth'])->name('dashboard');

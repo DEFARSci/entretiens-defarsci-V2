@@ -15,7 +15,6 @@
 <div class="row mt-3 p-2">
 
     <div class=" col-md-5" >
-
         <input type="text" name="prenom" class="form-control" placeholder="Prenom"/>
     </div>
     <div class="col-md-5  " >
@@ -24,7 +23,6 @@
     <div class="col-md-2  " >
     <button type="submit" class="btn btn-info  ">
         <i class="fa fa-search " style="color:white  "></i>
-
     </button>
     </div>
 </div>

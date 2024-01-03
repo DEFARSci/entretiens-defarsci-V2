@@ -1,3 +1,10 @@
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<header class="fixed top-0 w-full bg-blue-300 text-white py-7">
+    <div class="container mx-auto">
+        <h1 class="text-center text-3xl font-bold">Plateforme D'entretien</h1>
+        <p class="text-center text-lg">Remplissez tous les champs svp !!</p>
+    </div>
+</header>
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
@@ -8,6 +15,12 @@
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
+
+        <div class="flex font-sans">
+        <div class="flex-none w-48 relative">
+            <img src="/profile2.svg" alt="" class="absolute inset-0 w-50 h-50 object-cover p-4" loading="lazy" />
+            <b>ADMIN</b>
+        </div>
 
         <form method="POST" action="{{ route('register') }}">
             @csrf

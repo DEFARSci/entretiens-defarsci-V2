@@ -93,41 +93,18 @@
         </tr>
 
 <tr>
-
         @foreach($entretiens as $entretien)
-
     <td>{{ $entretien->id }}</td>
       <td>{{ $entretien->prenom}}</td>
       <td>{{ $entretien->nom}}</td>
       <td>{{$entretien->created_at->formatLocalized('%d %B %Y %H:%M:%S') }}</td>
-
-
-
             <td class="d-flex ">
                 <a href="{{ route('entretiens.show', $entretien->id)}}" class="btn btn-success mx-1 " ><i class="fa fa-eye " ></i></a>
-
-
              <a href="{{ route('entretiens.edit', $entretien->id)}}" class="btn btn-primary mx-1 "  ><i class="fa fa-pencil-square-o" ></i></a>
-
-
-
 </a>
-
-
-
-
-
-
                  <a class="btn btn-warning mx-1 "  href="{{ route('entretien.pdf',$entretien->id) }}"> <i class="fa fa-download" ></i> </a>
 
             </td>
-
-
-
-
-
-
-
 
         </tr>
         @endforeach

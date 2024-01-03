@@ -143,9 +143,6 @@ class EntretienController extends Controller
             return $query->where('maladie_ou_allergie', $alergie);
         })
         ->get();
-
-
-
     //    $domaine = $request->input('domaine');
     //    $maladie_ou_allergie = $request->input('maladie_ou_allergie');
     //    $date = $request->input('date');
@@ -154,25 +151,13 @@ class EntretienController extends Controller
     //                           ->where('maladie_ou_allergie', $maladie_ou_allergie)
     //                           ->whereDate('created_at', $date)
     //                           ->get();
-
         return view('resultats', compact('entretiens'));
-
 }
-
-
   public function export_entretien_pdf($id){
-
-
     $entretiens = Entretien::find($id );
-        $pdf = PDF::loadView('entretien', ['entretien'=>$entretiens]);
+        $pdf =PDF::loadView('entretien', ['entretien'=>$entretiens]);
         return $pdf->download('entretien.pdf');
   }
-
-
-
-
-
-
 
 
     /**
@@ -185,9 +170,6 @@ class EntretienController extends Controller
     public function update(Request $request, $id)
     {
          $entretiens = Entretien::find($id);
-
-
-
         $entretiens->nom=$request->nom;
         $entretiens->prenom=$request->prenom;
         $entretiens->email=$request->email;
