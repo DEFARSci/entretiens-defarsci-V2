@@ -46,6 +46,9 @@
     }
 </style>
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofdaHt+2T9U7Z3qI3/2GuqzEL4y" crossorigin="anonymous">
+
 <!-- Sidebar -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
     <div class="offcanvas-header">
@@ -59,16 +62,18 @@
     </div>
 
     <!-- Navigation Links -->
-    <ul class="navbar-nav">
+    <ul class="navbar-nav mx-5">
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
+            <a class="nav-link" href="{{ route('dashboard') }}">
+                <i class="bi bi-grid-1x2-fill"></i> Dashboard</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('entretiens-create') }}">Entretien</a>
+            <a class="nav-link" href="{{ route('entretiens-create') }}">
+                <i class="bi bi-wrench"></i> Entretien</a>
         </li>
         @if (Auth::user()->name == 'admin')
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('register') }}">Ajouter Utilisateur</a>
+                <a class="nav-link" href="{{ route('register') }}"><i class="bi bi-person-fill fs-4"></i> Ajouter Utilisateur</a>
             </li>
             <!-- Admin Section -->
             <li class="nav-item">
