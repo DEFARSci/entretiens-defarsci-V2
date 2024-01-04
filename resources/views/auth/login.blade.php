@@ -1,5 +1,4 @@
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-
 <header class="fixed top-0 w-full bg-blue-300 text-white py-7">
     <div class="container mx-auto">
         <h1 class="text-center text-3xl font-bold">Plateforme D'entretien</h1>

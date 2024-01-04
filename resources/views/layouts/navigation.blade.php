@@ -116,7 +116,7 @@ body {
             </li>
             @if (Auth::user()->name == 'admin')
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('register') }}">Ajouter Utilisateur</a>
+                    <a class="nav-link" href="{{ route('user.index') }}">Liste des utilisateurs</a>
                 </li>
                 <!-- Admin Section -->
                 <li class="nav-item">
@@ -126,7 +126,8 @@ body {
                             @auth
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
-                                    <i class="fa-solid fa-user">&emsp;Admin</i><button type="submit" class="btn btn-danger btn-sm">Logout &nbsp;<i class="fa-solid fa-right-from-bracket"></i></button>
+                                    <i class="fa-solid fa-user">&emsp;Admin</i>
+                                    <button type="submit" class="btn btn-danger btn-sm">Logout &nbsp;<i class="fa-solid fa-right-from-bracket"></i></button>
 
                                 </form>
                             @else

@@ -4,6 +4,13 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 
 
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<header class="fixed top-0 w-full bg-blue-300 text-white">
+    <div class="container mx-auto">
+        <h1 class="text-center text-3xl font-bold">Plateforme D'entretien</h1>
+        <p class="text-center text-lg">Gestionnaire d'utilisateur</p>
+    </div>
+</header>
 @extends('layout.app')
 
 @section('content')
@@ -11,7 +18,7 @@
     <h4>Liste des Utilisateurs</h4>
 
     <!-- Formulaire de recherche -->
-    <div cl>
+    <div class="py-4">
         <div class="row">
             <div class="col-md-6">
                 <form action="{{ route('user.index') }}" method="GET">
@@ -28,7 +35,7 @@
         </div>
     </div>
     <!-- Afficher la liste des utilisateurs -->
-    <table class="table">
+    <table class="table ">
 
         <thead>
             <tr>
