@@ -1,19 +1,22 @@
 
- @extends('layout')
+@extends('layout')
 
 @section('content')
 <style>
   .uper {
     margin-top: 40px;
   }
+  .sect{
+    background-color: red;
+  }
 </style>
 
-<div >
+<div>
   <div >
     Ajouter un Entretien
   </div>
 
-  <div >
+  <div>
     @if ($errors->any())
       <div class="alert alert-danger">
         <ul>
@@ -23,8 +26,8 @@
         </ul>
       </div><br />
     @endif
- <section>
-        <div >
+<section>
+        <div>
 
       <form method="post" action="{{ route('entretiens.store') }}" enctype="multipart/form-dtat">
     @csrf

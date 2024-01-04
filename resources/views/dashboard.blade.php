@@ -15,6 +15,7 @@
   .uper {
     margin-top: 40px;
   }
+
 </style>
 
 <div class="uper ">
@@ -87,3 +88,5 @@
         </div>
     </div>
 </x-app-layout>
+
+

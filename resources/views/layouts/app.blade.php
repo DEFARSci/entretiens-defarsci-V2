@@ -13,8 +13,14 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="shortcut icon" href="{{asset('logo.png')}}" type="image/x-icon">
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-pzjw8s+ot/zq2Zq4hC+EPyF+jbg6L/A+nxlR7AF/fTfPQ1g5JL/5I2M62PIEx6D" crossorigin="anonymous">
+        <!-- Styles -->
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}"> 
+        <!-- inclure font awesone -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-GLhlTQ8iZUlwjkKTZMK63SXPn9QJYYiC9P5UtF5r5pN4pDmL/70R5C5PxhE6P" crossorigin="anonymous">
+
     </head>
     <body class="font-sans antialiased">
         <div class="mb-5 bg-gray-100">
@@ -32,5 +38,10 @@
                 {{ $slot }}
             </main>
         </div>
+       <!-- Scripts -->
+       <script src="{{ asset('js/app.js') }}" defer></script>
+
+       <!-- Bootstrap JS (bundle includes Popper) -->
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyUXEES9k8rEtrJA92KbBX6jNf6HI/tOtP" crossorigin="anonymous"></script>
     </body>
 </html>
