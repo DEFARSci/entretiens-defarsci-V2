@@ -114,7 +114,7 @@ body {
         <ul class="navbar-nav ">
             <li class="nav-item">
 
-                <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
+                
 
                 <a class="nav-link" href="{{ route('dashboard') }}"><i class="fa-solid fa-house"></i>&emsp;Dashboard</a>
 
