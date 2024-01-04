@@ -9,7 +9,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     /* Styles for Offcanvas */
     #sidebar {
     width: 300px;
-    background-color: #add8e6; /* Utilisez la couleur bleu clair de votre choix */
+   
 }
 
 
@@ -150,5 +150,7 @@ body {
 
 
 <!-- Button to toggle sidebar -->
-
+<button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+    <span class="navbar-toggler-icon">Menu</span>
+</button>
 

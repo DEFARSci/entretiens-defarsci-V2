@@ -1,7 +1,9 @@
+
+
 @extends('layout.app')
 
 @section('content')
-<div class="container shadow " style="width: 80%;">
+<div class="container shadow mt-5" style="width: 80%;">
     <div class="row" style="">
         <h5>Ajouter un utilisateur</h5>
 
