@@ -18,6 +18,7 @@ integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4
     <!-- Formulaire de recherche -->
     <div class="py-4">
         <div class="row">
+
             <div class="col-md-6">
                 <form action="{{ route('user.index') }}" method="GET">
                     <div class="form-group d-flex  col-md-8">
