@@ -116,7 +116,7 @@ body {
             </li>
             @if (Auth::user()->name == 'admin')
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('register') }}">Ajouter Utilisateur</a>
+                    <a class="nav-link" href="{{ route('user.index') }}">Liste des utilisateurs</a>
                 </li>
                 <!-- Admin Section -->
                 <li class="nav-item">
