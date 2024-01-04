@@ -9,7 +9,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     /* Styles for Offcanvas */
     #sidebar {
     width: 300px;
-    background-color: #add8e6; /* Utilisez la couleur bleu clair de votre choix */
+   
 }
 
 
