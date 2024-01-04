@@ -4202,6 +4202,7 @@
             "time": "2023-12-01T16:51:11+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "symfony/mailer",
             "version": "v6.1.11",
             "source": {
@@ -4285,6 +4286,17 @@
             },
             "dist": {
                 "type": "zip",
+=======
+            "name": "symfony/mime",
+            "version": "v5.4.26",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/mime.git",
+                "reference": "2ea06dfeee20000a319d8407cea1d47533d5a9d2"
+            },
+            "dist": {
+                "type": "zip",
+>>>>>>> 54149b36ab4eaa1c97f7a5b7af5076eb45439597
                 "url": "https://api.github.com/repos/symfony/mime/zipball/2ea06dfeee20000a319d8407cea1d47533d5a9d2",
                 "reference": "2ea06dfeee20000a319d8407cea1d47533d5a9d2",
                 "shasum": ""
@@ -8387,5 +8399,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

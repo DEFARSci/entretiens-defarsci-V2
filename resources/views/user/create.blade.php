@@ -1,8 +1,10 @@
+
+
 @extends('layout.app')
 
 @section('content')
 <div class="container shadow " style="width: 80%;">
-    <div class="row" style="">
+    <div class="row">
         <h5>Ajouter un utilisateur</h5>
 
         @if ($errors->any())
