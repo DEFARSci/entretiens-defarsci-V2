@@ -1,8 +1,5 @@
 
 
-
-
-
 <style>
     /* Styles for Offcanvas */
     #sidebar {
