@@ -1,10 +1,16 @@
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <header class="fixed top-0 w-full bg-blue-300 text-white">
     <div class="container mx-auto">
         <h1 class="text-center text-3xl font-bold">Plateforme D'entretien</h1>
-        <p class="text-center text-lg">Renseignez vos credentiels svp !!</p>
+        <p class="text-center text-lg">Renseignez tous les champs svp !!</p>
     </div>
 </header>
+
 <style>
     .shadow{
         margin-top: 20vh;
@@ -22,7 +28,7 @@
                 </ul>
             </div>
         @endif
-    <div class="container shadow " style="width: 70%; display: flex; padding-right:20px;">
+<div class="container shadow " style="width: 70%; display: flex; padding-right:20px;">
         <div class="flex-none w-50 relative">
             <img src="/profil.jpg" alt="" class="absolute inset-0 w-full h-full object-cover p-4" loading="lazy" />
         </div>
