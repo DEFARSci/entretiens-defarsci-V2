@@ -17,7 +17,7 @@
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-pzjw8s+ot/zq2Zq4hC+EPyF+jbg6L/A+nxlR7AF/fTfPQ1g5JL/5I2M62PIEx6D" crossorigin="anonymous">
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/styles.css') }}"> 
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
         <!-- inclure font awesone -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-GLhlTQ8iZUlwjkKTZMK63SXPn9QJYYiC9P5UtF5r5pN4pDmL/70R5C5PxhE6P" crossorigin="anonymous">
 
@@ -29,11 +29,11 @@
             <!-- Page Heading -->
             <header class="bg-white shadow fixed-top">
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <button class="btn btn-dark btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
-                <span class="navbar-toggler-icon">Menu</span>
+                <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+                <span class="navbar-toggler-icon mr-2">Menu</span>
                 </button>
                     {{ $header }}
-                    
+
                 </div>
             </header>
 
