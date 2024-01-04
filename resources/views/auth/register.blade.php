@@ -1,5 +1,6 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-<header class="fixed top-0 w-full bg-blue-300 text-white py-7">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <header class="fixed top-0 w-full bg-blue-300 text-white py-7">
     <div class="container mx-auto">
         <h1 class="text-center text-3xl font-bold">Plateforme D'entretien</h1>
         <p class="text-center text-lg">Remplissez tous les champs svp !!</p>
@@ -18,8 +19,11 @@
 
         <div class="flex font-sans">
         <div class="flex-none w-48 relative">
-            <img src="/profile2.svg" alt="" class="absolute inset-0 w-50 h-50 object-cover p-4" loading="lazy" />
-            <b>ADMIN</b>
+            <!--<img src="/profile2.svg" alt="" class="absolute inset-0 w-50 h-50 object-cover p-4" loading="lazy" /> -->
+            <b>ADMIN</b><br><br>
+            <a class="" href="{{ route('user.index') }}">
+                <button type="button" class="btn btn-primary text-black"><i class="fa-solid fa-face-rolling-eyes"></i> &nbsp;Voir la Liste</button>
+            </a>
         </div>
 
         <form method="POST" action="{{ route('register') }}">
@@ -70,4 +74,8 @@
         </form>
     </x-auth-card>
 </x-guest-layout>
+
+
+</body>
+</html>
 
