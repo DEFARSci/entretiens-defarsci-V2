@@ -21,7 +21,7 @@
         <div class="flex-none w-48 relative">
             <!--<img src="/profile2.svg" alt="" class="absolute inset-0 w-50 h-50 object-cover p-4" loading="lazy" /> -->
             <b>ADMIN</b><br><br>
-            <a class="" href="{{ route('user.index') }}">
+            <a class="" href="{{ route('register') }}">
                 <button type="button" class="btn btn-primary text-black"><i class="fa-solid fa-face-rolling-eyes"></i> &nbsp;Voir la Liste</button>
             </a>
         </div>

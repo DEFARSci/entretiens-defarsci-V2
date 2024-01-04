@@ -2,6 +2,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<header class="fixed top-0 w-full bg-blue-300 text-white">
+    <div class="container mx-auto">
+        <h1 class="text-center text-3xl font-bold">Plateforme D'entretien</h1>
+        <p class="text-center text-lg">Gestionnaire d'utilisateur</p>
+    </div>
+</header>
 @extends('layout.app')
 
 @section('content')
@@ -9,7 +16,7 @@ integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4
     <h4>Liste des Utilisateurs</h4>
 
     <!-- Formulaire de recherche -->
-    <div cl>
+    <div class="py-4">
         <div class="row">
             <div class="col-md-6">
                 <form action="{{ route('user.index') }}" method="GET">
@@ -21,12 +28,12 @@ integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4
             </div>
 
             <div class="col-md-6" style="text-align: center;">
-                <a href="{{ route('user.create') }}" class="btn btn-primary fw-bold"><i class="fa-solid fa-plus"></i>&nbsp;Créer un utilisateur</a>
+                <a href="{{ route('user.create')  }}" class="btn btn-primary fw-bold"><i class="fa-solid fa-plus"></i>&nbsp;Créer un utilisateur</a>
             </div>
         </div>
     </div>
     <!-- Afficher la liste des utilisateurs -->
-    <table class="table">
+    <table class="table ">
 
         <thead>
             <tr>

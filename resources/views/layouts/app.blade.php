@@ -29,8 +29,8 @@
             <!-- Page Heading -->
             <header class="bg-white shadow fixed-top">
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <button class="btn btn-dark btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
-                <span class="navbar-toggler-icon">Menu</span>
+                <button class="btn btn-dark btn-lg mr-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+                <span class="navbar-toggler-icon mr-2">Menu</span>
                 </button>
                     {{ $header }}
                     
