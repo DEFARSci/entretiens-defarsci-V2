@@ -1,3 +1,8 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 
 
 <style>
@@ -70,22 +75,26 @@ body {
 
 /* Styles for Admin Section */
 .btn-sm {
-    margin-top: 4px; /* Ajustez l'espacement entre le texte et le bouton selon vos besoins */
+    margin-top: 90px;
+    margin-left:0px; /* Ajustez l'espacement entre le texte et le bouton selon vos besoins */
 }
 
 /* Styles for Social Icons */
 .fa-facebook, .fa-tiktok, .fa-whatsapp {
     font-size: 1.5rem; /* Ajustez la taille de la police des icônes sociales selon vos besoins */
-    margin-right: 8px; /* Ajustez l'espacement entre les icônes selon vos besoins */
-    color: #fff; /* Couleur des icônes sociales */
+    margin-right: 8px;
+    padding-left: 40px;
+    padding-top: 70px; /* Ajustez l'espacement entre les icônes selon vos besoins */
+    color: black; /* Couleur des icônes sociales */
 }
-
+.copy{
+    padding-top:40px;
+}
 
 </style>
 
 <!-- Sidebar -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
-
 
     <div class="offcanvas-header">
         <div class="shrink-0 flex items-center">
@@ -112,12 +121,12 @@ body {
                 <!-- Admin Section -->
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        Admin
-                        <button class="btn btn-light btn-sm ml-2">
+                    <!-- Admin -->
+                    <!-- <button class="btn btn-light btn-sm ml-2"> -->
                             @auth
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
-                                    <button type="submit" class="btn btn-primary btn-sm">Logout</button>
+                                    <i class="fa-solid fa-user">&emsp;Admin</i><button type="submit" class="btn btn-danger btn-sm">Logout &nbsp;<i class="fa-solid fa-right-from-bracket"></i></button>
 
                                 </form>
                             @else
@@ -135,12 +144,11 @@ body {
             <a href="#" class="text-white me-2"><i class="fab fa-tiktok"></i></a>
             <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
         </div>
+        <div class="copy">&copy;Copyright Tout droit &reg;reswerved</div>
     </div>
 </div>
 
 
 <!-- Button to toggle sidebar -->
-<button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
-    <span class="navbar-toggler-icon"></span>
-</button>
+
 
