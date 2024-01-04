@@ -1,7 +1,7 @@
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
 crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 
 
@@ -9,7 +9,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     /* Styles for Offcanvas */
     #sidebar {
     width: 300px;
-    background-color: #add8e6; /* Utilisez la couleur bleu clair de votre choix */
+   
 }
 
 
@@ -109,14 +109,14 @@ body {
         <!-- Navigation Links -->
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('dashboard') }}"></i>Dashboard</a>
+                <a class="nav-link" href="{{ route('dashboard') }}"><i class="fa-solid fa-house"></i>&emsp;Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('entretiens-create') }}">Entretien</a>
+                <a class="nav-link" href="{{ route('entretiens-create') }}"><i class="fa-regular fa-handshake"></i>&emsp;Entretien</a>
             </li>
             @if (Auth::user()->name == 'admin')
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('user.index') }}">Liste des utilisateurs</a>
+                    <a class="nav-link" href="{{ route('user.index') }}"><i class="fa-solid fa-list"></i>&emsp;Liste des utilisateurs</a>
                 </li>
                 <!-- Admin Section -->
                 <li class="nav-item">
@@ -150,5 +150,7 @@ body {
 
 
 <!-- Button to toggle sidebar -->
-
+<button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+    <span class="navbar-toggler-icon">Menu</span>
+</button>
 

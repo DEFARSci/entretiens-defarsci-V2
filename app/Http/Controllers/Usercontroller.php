@@ -12,7 +12,7 @@ class UserController extends Controller
     public function index(Request $request)
     {
         $search = $request->input('search');
-        
+
         // Utilisation de paginate au lieu de all
         $users = User::where(function ($query) use ($search) {
             $query->where('name', 'like', "%$search%")
