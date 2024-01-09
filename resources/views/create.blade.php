@@ -9,10 +9,13 @@
   .sect{
     background-color: red;
   }
-
+.class{
+    position: relative;
+    top: 20vh;
+}
 </style>
 
-<div cl>
+<div class="">
   <div >
     Ajouter un Entretien
   </div>
@@ -27,7 +30,7 @@
         </ul>
       </div><br />
     @endif
-    <section>
+    <section class="class">
             <div>
 
         <form method="post" action="{{ route('entretiens.store') }}" enctype="multipart/form-dtat">
@@ -96,14 +99,7 @@
                 <button type="button" value="Suivant" onclick="showStep2()" id="bouton">suivant</button>
                 </div>
                 </div>
-
-
-
-
-
             <div id="step2" style="display:none">
-
-
         <fieldset class="form-group">
             <div class="row">
                 <label for="name"></label>
@@ -181,9 +177,7 @@
             <button type="submit" value="Soumettre" id="bouton">Soumettre</button>
             </div>
             </div>
-
         </form>
-
         </div>
     </section>
   </body>

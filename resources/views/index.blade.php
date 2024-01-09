@@ -7,6 +7,7 @@
 <style>
   .uper {
     margin-top: 40px;
+   
   }
 </style>
 
@@ -20,7 +21,7 @@
   @endif
 @include('partials.search')
 
-<div class="container-fluid ">
+<div class="container-fluid  ">
    <table class="table " style="width:100%;">
     <div>
         <tr >
@@ -69,6 +70,6 @@
         @endforeach
     </table>
 
-    
+
 <div>
 @endsection

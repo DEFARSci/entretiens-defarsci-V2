@@ -114,7 +114,7 @@ body {
         <ul class="navbar-nav ">
             <li class="nav-item">
 
-                
+
 
                 <a class="nav-link" href="{{ route('dashboard') }}"><i class="fa-solid fa-house"></i>&emsp;Dashboard</a>
 
@@ -148,9 +148,9 @@ body {
 
         <!-- Footer with Social Icons -->
         <div class="mt-4">
-            <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.facebook.com/search/top?q=defar%20sci" class="text-white me-2"><i class="fab fa-facebook"></i></a>
             <a href="#" class="text-white me-2"><i class="fab fa-tiktok"></i></a>
-            <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
+            <a href="" class="text-white"><i class="fab fa-whatsapp"></i></a>
         </div>
         <div class="copy">&copy;Copyright Tout droit &reg;reswerved</div>
     </div>
