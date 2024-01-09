@@ -53,7 +53,7 @@
                 <input type="password" class="form-control border-0" id="password_confirmation" placeholder="Confirmer le mot de passe" name="password_confirmation" style="background-color: #f2f2f2;">
             </div>
 
-            <button type="submit" class="btn btn-primary fw-bold  mb-4 col-md-2">Enregistrer</button>
+            <button type="submit" class="btn btn-primary col-md-2 mb-4 fw-bold">Enregistrer</button>
 
 
         </form>

@@ -5,9 +5,14 @@
         <p class="text-center text-lg">Renseignez vos credentiels svp !!</p>
     </div>
 </header>
+<style>
+    .margin{
+        margin-top: 50px;
+    }
+</style>
 
 <x-guest-layout>
-    
+    <div class="margin">
     <x-auth-card>
         
         <x-slot name="logo">
@@ -69,5 +74,6 @@
         </form>
 </div>
     </x-auth-card>
+    </div>
 </x-guest-layout>
 

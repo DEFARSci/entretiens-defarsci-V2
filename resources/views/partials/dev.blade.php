@@ -25,7 +25,7 @@
         <option value="non">NON</option>
 
     </select>
-    <input type="date" name="date" id="date"   style="color:blue;width:30.5%;heigth:20%;" >
+    <input type="date" name="date" id="date"   style="color:blue;width:30.5%; height:20%;" >
     <button type="submit" class="btn btn-primary "><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
 
     </div>
