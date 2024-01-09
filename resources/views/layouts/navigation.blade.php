@@ -9,7 +9,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     /* Styles for Offcanvas */
     #sidebar {
     width: 300px;
-   
+
 }
 
 
@@ -30,7 +30,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 /* Styles for Navigation Links */
 .navbar-nav {
-  padding-left: 0;
+
 }
 
 .nav-item {
@@ -90,6 +90,10 @@ body {
 .copy{
     padding-top:40px;
 }
+.btn-danger{
+    position: relative;
+    right: 12vh;
+}
 
 </style>
 
@@ -107,9 +111,13 @@ body {
     </div>
 
         <!-- Navigation Links -->
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ">
             <li class="nav-item">
+
+                
+
                 <a class="nav-link" href="{{ route('dashboard') }}"><i class="fa-solid fa-house"></i>&emsp;Dashboard</a>
+
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('entretiens-create') }}"><i class="fa-regular fa-handshake"></i>&emsp;Entretien</a>
@@ -124,18 +132,37 @@ body {
                     <!-- Admin -->
                     <!-- <button class="btn btn-light btn-sm ml-2"> -->
                             @auth
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <i class="fa-solid fa-user">&emsp;Admin</i><button type="submit" class="btn btn-danger btn-sm">Logout &nbsp;<i class="fa-solid fa-right-from-bracket"></i></button>
-
-                                </form>
+                              
                             @else
-                                <a href="{{ route('login') }}" class="btn btn-primary btn-sm">Login</a>
+                                <a href="{{ route('login') }}" class="btn btn-primary btn-sm ">Login</a>
                             @endif
                         </button>
                     </a>
                 </li>
             @endif
+
+            @if (Auth::user()->name )
+
+                <!-- Admin Section -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                    <!-- Admin -->
+                    <!-- <button class="btn btn-light btn-sm ml-2"> -->
+                            @auth
+                                <form method="POST" action="{{ route('logout') }}" class="bg-blue">
+                                    @csrf
+                                    <i class="fa-solid fa-user ">&emsp;{{Auth::user()->name}}</i><button type="submit" class="btn btn-danger btn-sm ">Logout &nbsp;<i class="fa-solid fa-right-from-bracket"></i></button>
+
+                                </form>
+                            @else
+                                <a href="{{ route('login') }}" class="btn btn-primary btn-sm ">Login</a>
+                            @endif
+                        </button>
+                    </a>
+                </li>
+            @endif
+
+            
         </ul>
 
         <!-- Footer with Social Icons -->
@@ -150,7 +177,3 @@ body {
 
 
 <!-- Button to toggle sidebar -->
-<!-- <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
-    <span class="navbar-toggler-icon">Menu</span>
-</button> -->
-

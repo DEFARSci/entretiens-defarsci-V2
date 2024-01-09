@@ -28,39 +28,28 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 </ul>
             </div>
         @endif
-        
-
 <div class="container shadow " style="width: 70%; display: flex; padding-right:20px;">
-<div><a href="{{ route('dashboard')  }}" class="btn btn-danger fw-bold"><i class="fa-solid fa-house"></i>&nbsp;Home</a></div>
         <div class="flex-none w-50 relative">
             <img src="/profil.jpg" alt="" class="absolute inset-0 w-full h-full object-cover p-4" loading="lazy" />
         </div>
-
         <div class="mt-4">
-            
-        <form action="{{ url('user') }}" method="POST" class="">
-        <h5>Ajouter utilisateur</h5>
-            @csrf
-
-            <div class="form-group mb-3 col-md-12">
-                <label for="name">Nom :</label>
-                <input type="text" class="form-control border-0" id="name" placeholder="Nom" name="name" style="background-color: #f2f2f2;">
-            </div>
-
-            <div class="form-group mb-3 col-md-12">
-                <label for="email">Email :</label>
-                <input type="text" class="form-control border-0" id="email" placeholder="Email" name="email" style="background-color: #f2f2f2;">
-            </div>
-
-            <div class="form-group mb-3 col-md-12">
-                <label for="password">Mot de passe :</label>
-                <input type="password" class="form-control border-0" id="password" placeholder="Mot de passe" name="password" style="background-color: #f2f2f2;">
-            </div>
-
-            <button type="submit" class="btn btn-primary mb-4">Enregistrer</button>
-
-        </form>
+            <form action="{{ url('user') }}" method="POST" class="">
+            <h5>Ajouter utilisateur</h5>
+                @csrf
+                <div class="form-group mb-3 col-md-12">
+                    <label for="name">Nom :</label>
+                    <input type="text" class="form-control border-0" id="name" placeholder="Nom" name="name" style="background-color: #f2f2f2;">
+                </div>
+                <div class="form-group mb-3 col-md-12">
+                    <label for="email">Email :</label>
+                    <input type="text" class="form-control border-0" id="email" placeholder="Email" name="email" style="background-color: #f2f2f2;">
+                </div>
+                <div class="form-group mb-3 col-md-12">
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" class="form-control border-0" id="password" placeholder="Mot de passe" name="password" style="background-color: #f2f2f2;">
+                </div>
+                <button type="submit" class="btn btn-primary mb-4">Enregistrer</button>
+            </form>
         </div>
     </div>
-</div>
 @endsection
