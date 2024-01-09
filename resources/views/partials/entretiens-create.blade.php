@@ -13,11 +13,14 @@
   /* .uper {
     margin-top: 40px;
   } */
+  .marge{
+    margin-top: 50px;
+  }
 </style>
 
-<div >
+<div class="marge">
   <div >
-    Ajouter un Entretien
+    <h4><b>Ajouter un Entretien</b></h4>
   </div>
 
   <div >
