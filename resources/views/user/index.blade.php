@@ -37,6 +37,10 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
             <div class="col-md-6" style="text-align: center;">
                 <a href="{{ route('user.create') }}" class="btn btn-primary fw-bold"><i class="fa-solid fa-plus"></i>&nbsp;Créer un utilisateur</a>
+
+
+                <a href="{{ route('user.create')  }}" class="btn btn-primary fw-bold"><i class="fa-solid fa-plus"></i>&nbsp;Créer un utilisateur</a>
+
             </div>
         </div>
     </div>
