@@ -167,9 +167,10 @@ body {
 
         <!-- Footer with Social Icons -->
         <div class="mt-4">
-            <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="text-white me-2"><i class="fab fa-tiktok"></i></a>
-            <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/rosedienglab?mibextid=ZbWKwL" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/@defar_sci?_t=8itRa0vvBlm&_r=1" class="text-white me-2"><i class="fab fa-tiktok"></i></a>
+            <a href="+221 77 435 01 15" class="text-white"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="text-white"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
         <div class="copy">&copy;Copyright Tout droit &reg;reswerved</div>
     </div>
