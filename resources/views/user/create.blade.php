@@ -14,12 +14,15 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
     .shadow{
         margin-top: 20vh;
-    }
+}
 </style>
+
 @extends('layout.app')
 
 @section('content')
-@if ($errors->any())
+
+
+        @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
                     @foreach ($errors->all() as $error)
@@ -33,23 +36,30 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
             <img src="/profil.jpg" alt="" class="absolute inset-0 w-full h-full object-cover p-4" loading="lazy" />
         </div>
         <div class="mt-4">
-            <form action="{{ url('user') }}" method="POST" class="">
-            <h5>Ajouter utilisateur</h5>
-                @csrf
-                <div class="form-group mb-3 col-md-12">
-                    <label for="name">Nom :</label>
-                    <input type="text" class="form-control border-0" id="name" placeholder="Nom" name="name" style="background-color: #f2f2f2;">
-                </div>
-                <div class="form-group mb-3 col-md-12">
-                    <label for="email">Email :</label>
-                    <input type="text" class="form-control border-0" id="email" placeholder="Email" name="email" style="background-color: #f2f2f2;">
-                </div>
-                <div class="form-group mb-3 col-md-12">
-                    <label for="password">Mot de passe :</label>
-                    <input type="password" class="form-control border-0" id="password" placeholder="Mot de passe" name="password" style="background-color: #f2f2f2;">
-                </div>
-                <button type="submit" class="btn btn-primary mb-4">Enregistrer</button>
-            </form>
+            
+        <form action="{{ url('user') }}" method="POST" class="">
+        <h5>Ajouter utilisateur</h5>
+            @csrf
+
+            <div class="form-group mb-3 col-md-12">
+                <label for="name">Nom :</label>
+                <input type="text" class="form-control border-0" id="name" placeholder="Nom" name="name" style="background-color: #f2f2f2;">
+            </div>
+
+            <div class="form-group mb-3 col-md-12">
+                <label for="email">Email :</label>
+                <input type="text" class="form-control border-0" id="email" placeholder="Email" name="email" style="background-color: #f2f2f2;">
+            </div>
+
+            <div class="form-group mb-3 col-md-12">
+                <label for="password">Mot de passe :</label>
+                <input type="password" class="form-control border-0" id="password" placeholder="Mot de passe" name="password" style="background-color: #f2f2f2;">
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-4">Enregistrer</button>
+
+        </form>
         </div>
     </div>
+</div>
 @endsection

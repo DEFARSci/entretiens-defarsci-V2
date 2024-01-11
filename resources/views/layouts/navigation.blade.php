@@ -151,7 +151,7 @@ body {
                             @auth
                                 <form method="POST" action="{{ route('logout') }}" class="bg-blue">
                                     @csrf
-                                    <i class="fa-solid fa-user ">&emsp;{{Auth::user()->name}}</i><button type="submit" class="btn btn-danger btn-sm ">Logout &nbsp;<i class="fa-solid fa-right-from-bracket"></i></button>
+                                    <i class="fa-solid fa-user">&emsp;Admin</i><button type="submit" class="btn btn-danger btn-sm">Logout &nbsp;<i class="fa-solid fa-right-from-bracket"></i></button>
 
                                 </form>
                             @else
