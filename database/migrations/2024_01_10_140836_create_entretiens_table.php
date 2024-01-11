@@ -13,6 +13,7 @@ class CreateEntretiensTable extends Migration
      */
     public function up()
     {
+    if (!Schema::hasTable('entretiens')) {
         Schema::create('entretiens', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
@@ -39,11 +40,9 @@ class CreateEntretiensTable extends Migration
             $table->string('informations_supplementaires');
             $table->timestamps();
         });
-
-
-          DB::statement(
-            'ALTER TABLE entretiens ADD FULLTEXT fulltext_index(nom, prenom, email)'
-        );
+        
+        }
+        
     }
 
     /**
